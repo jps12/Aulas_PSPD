@@ -1,5 +1,5 @@
 CC = gcc
-LDFLAGS = -lwiringPi 
+LDFLAGS = 
 BLDDIR = .
 INCDIR = $(BLDDIR)/inc
 SRCDIR = $(BLDDIR)/src
