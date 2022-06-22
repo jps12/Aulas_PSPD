@@ -12,10 +12,11 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+#define MAX_SIZE 500000
 
 
 struct vetor {
-	int vetor[100];
+	int vetor[MAX_SIZE];
 };
 typedef struct vetor vetor;
 
@@ -27,7 +28,6 @@ typedef struct int_pair int_pair;
 
 #define MIN_MAX 200
 #define VERSAO 100
-#define MAX_SIZE 100
 
 #if defined(__STDC__) || defined(__cplusplus)
 #define vetor_min_max 1

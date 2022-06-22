@@ -1,11 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 #include "get_min_max.h"
 
 
 void set_vetor(vetor *vetor_tmp){
 	for (int i=0; i<MAX_SIZE; i++) {
-		vetor_tmp->vetor[i] = i;
+		vetor_tmp->vetor[i] = (int) pow((i - ((rand() % MAX_SIZE)/2)), 2);
 	}
-}
+} 
 
 void
 min_max_100(char *host)

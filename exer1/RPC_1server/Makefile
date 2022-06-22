@@ -3,8 +3,8 @@
 
 # Parameters
 
-CLIENT = get_min_max_client
-SERVER = get_min_max_server
+CLIENT = client
+SERVER = server
 
 SOURCES_CLNT.c = 
 SOURCES_CLNT.h = 
@@ -20,8 +20,8 @@ OBJECTS_CLNT = $(SOURCES_CLNT.c:%.c=%.o) $(TARGETS_CLNT.c:%.c=%.o)
 OBJECTS_SVC = $(SOURCES_SVC.c:%.c=%.o) $(TARGETS_SVC.c:%.c=%.o)
 # Compiler flags 
 
-CFLAGS += -g 
-LDLIBS += -lnsl
+CFLAGS += -g
+LDLIBS += -lnsl -lm
 RPCGENFLAGS = 
 
 # Targets 
@@ -42,5 +42,5 @@ $(SERVER) : $(OBJECTS_SVC)
 	$(LINK.c) -o $(SERVER) $(OBJECTS_SVC) $(LDLIBS)
 
  clean:
-	 $(RM) core $(TARGETS) $(OBJECTS_CLNT) $(OBJECTS_SVC) $(CLIENT) $(SERVER)
+	 $(RM) core $(OBJECTS_CLNT) $(OBJECTS_SVC)
 
