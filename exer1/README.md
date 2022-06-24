@@ -17,10 +17,13 @@ O arquivo PDF que contém as informações para o exercício relatado pode ser e
 ## 🚀 TCP 
 
 ### Funcionamento
+A aplicação funciona com base no protocolo de comunicação TCP (Transmission Control Protocol), ou seja, realiza a transmissão de um pacote de dados entre duas máquinas. Durante uma comunicação através do protocolo TCP, as duas máquinas devem estabelecer uma conexão. A máquina emissora (que pede a conexão) chama-se cliente enquanto a máquina receptora é o servidor. Dizemos então que estamos em um ambiente cliente-servidor. As máquinas em tal ambiente se comunicam em modo conectado, ou seja, a comunicação é feita nos dois sentidos.
 
 ### Limitações
+O lado servidor não está aceitando o vetor de 500 mil posições. Para caso de teste foi usado um vetor de 10 mil. 
 
 ### Dificuldades
+A principal dificuldade foi fazer a comunicação enviando um pacote contendo um vetor de 500 mil posições. A idéia para essa solução consistiu em dividir o vetor em um número x de pacotes e realizar o envio de cada pacote separadamente, com isso o problema de sobrecarga seria corrigido, porém, essa solução não foi implementada por problemas técnicos de implementação. 
 
 ### 💻 Como Rodar
 > Compilar o lado Servidor 
