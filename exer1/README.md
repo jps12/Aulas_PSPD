@@ -14,6 +14,29 @@ O objeJvo desse experimento é apresentar as caracterísJcas inerentes à constr
 ## Sobre o exercício
 O arquivo PDF que contém as informações para o exercício relatado pode ser encontrado clicando [aqui](PSPD2022_1_Lab1.pdf).
 
+## TCP 
+
+### Funcionamento
+
+### Limitações
+
+### Como Rodar
+> Compilar o lado Servidor 
+
+    gcc tcpServer.c -o tcpServer
+> Executar o lado Servidor 
+
+    ./tcpServer 127.0.0.1 5000
+> Compilar o lado Cliente 
+
+    gcc tcpClient.c -o tcpClient
+> Executar o lado Cliente 
+
+    ./tcpClient 127.0.0.1 5000
+> Obs: 
+    
+    O ip 127.0.0.1 refere-se ao servidor local da máquina e o segundo parâmetro está relacionado a porta nesse servidor, com isso é necessário que ela estaja disponível para uso. 
+
 ## Como rodar 
 
 ### RPC 
