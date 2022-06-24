@@ -2,7 +2,7 @@
 
 ## Introdução
 
-O objeJvo desse experimento é apresentar as caracterísJcas inerentes à construção de aplicações distribuídas, incluindo passagem de parâmetros, envolvendo módulos cliente e servidor usando RPC e Sockets TCP/UDP.
+O objetivo desse experimento é apresentar as caracterísJcas inerentes à construção de aplicações distribuídas, incluindo passagem de parâmetros, envolvendo módulos cliente e servidor usando RPC e Sockets TCP/UDP.
 
 ### Apresentação dos alunos:
 
@@ -14,13 +14,15 @@ O objeJvo desse experimento é apresentar as caracterísJcas inerentes à constr
 ## Sobre o exercício
 O arquivo PDF que contém as informações para o exercício relatado pode ser encontrado clicando [aqui](PSPD2022_1_Lab1.pdf).
 
-## TCP 
+## 🚀 TCP 
 
 ### Funcionamento
 
 ### Limitações
 
-### Como Rodar
+### Dificuldades
+
+### 💻 Como Rodar
 > Compilar o lado Servidor 
 
     gcc tcpServer.c -o tcpServer
