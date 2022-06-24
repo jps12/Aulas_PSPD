@@ -2,6 +2,8 @@
 
 ## Introdução
 
+O objeJvo desse experimento é apresentar as caracterísJcas inerentes à construção de aplicações distribuídas, incluindo passagem de parâmetros, envolvendo módulos cliente e servidor usando RPC e Sockets TCP/UDP.
+
 ### Apresentação dos alunos:
 
 | Nome | Matrícula |
