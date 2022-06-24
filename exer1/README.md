@@ -16,8 +16,15 @@ O arquivo PDF que contém as informações para o exercício relatado pode ser e
 
 ## 🚀 TCP 
 
-### Funcionamento
+### O protocolo
 A aplicação funciona com base no protocolo de comunicação TCP (Transmission Control Protocol), ou seja, realiza a transmissão de um pacote de dados entre duas máquinas. Durante uma comunicação através do protocolo TCP, as duas máquinas devem estabelecer uma conexão. A máquina emissora (que pede a conexão) chama-se cliente enquanto a máquina receptora é o servidor. Dizemos então que estamos em um ambiente cliente-servidor. As máquinas em tal ambiente se comunicam em modo conectado, ou seja, a comunicação é feita nos dois sentidos.
+
+### Funcionamento
+Com base na introdução abordada anteriormente, a aplicação funciona da seguinte maneira: 
+ - O Cliente envia ao servidor um vetor de 10 mil possições contendo números aleatórios;
+ - O Servidor recebe o pacote de dados enviado pelo cliente e calcula o maior e menor número do vetor;
+ - O Servidor retorna ao cliente o maior e menor número;
+ - O Cliente recebe e visualiza os dados.
 
 ### Limitações
 O lado servidor não está aceitando o vetor de 500 mil posições. Para caso de teste foi usado um vetor de 10 mil. 
@@ -42,9 +49,8 @@ A principal dificuldade foi fazer a comunicação enviando um pacote contendo um
     
     O ip 127.0.0.1 refere-se ao servidor local da máquina e o segundo parâmetro está relacionado a porta nesse servidor, com isso é necessário que ela estaja disponível para uso. 
 
-## Como rodar 
 
-### RPC 
+## 🚀 RPC 
 
 ### Socket
 
@@ -54,16 +60,11 @@ A principal dificuldade foi fazer a comunicação enviando um pacote contendo um
 
 ### Socket (intro sobre esse tipo de protocolo)
 
+### Solução apresentada
 
-## Solução apresentada
+### 💻 Como Rodar
 
-## Detalhes da Entrega
-
-### Entrega 1
-
-### Entrega 2
-
-## Opinião geral (adicionar a nota aqui tbm)
+## 🔖 Opinião geral (adicionar a nota aqui tbm)
 
 #### Victor Samuel dos Santos Lucas
 
