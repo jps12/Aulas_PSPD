@@ -22,8 +22,10 @@ void tratasinal(int s){
 }
 
 void iniciaVetor (){
+	double aux = 0;
 	for (int i = 0; i < MAX_SIZE; i++){
-		vet[i] = (sqrt((rand() % MAX_SIZE)/2));
+		aux = pow ((i - (rand() % MAX_SIZE)/2), 2);
+		vet[i] = sqrt(aux);
 	};
 };
 
