@@ -29,7 +29,7 @@ O arquivo PDF que contém as informações para o exercício relatado pode ser e
     ./tcpServer 127.0.0.1 5000
 > Compilar o lado Cliente 
 
-    gcc tcpClient.c -o tcpClient || gcc -o client tcpClient.c -lm  (Para ambientes que precisam da tag -lm para biblioteca math.h)
+    gcc tcpClient.c -o tcpClient || gcc -o tcpClient tcpClient.c -lm  (Para ambientes que precisam da tag -lm para biblioteca math.h)
 > Executar o lado Cliente 
 
     ./tcpClient 127.0.0.1 5000
