@@ -48,27 +48,71 @@ O lado servidor não está aceitando o vetor de 500 mil posições. Para caso de
 
 ## 🚀 RPC 
 
-### Socket
-
 ### Problema
+
+O problema proposto a ser resolvido com a programação RPC é que o lado cliente cria um vetor de 500000 posições e manda para o servidor que retorna com o maior e o menor número que estavam naquele vetor. 
 
 ### RPC (intro sobre esse tipo de protocolo)
 
-### Socket (intro sobre esse tipo de protocolo)
+Esse protocolo é um sigla em inglês que significa *Remote Procedure Call* e é um dos principais programas de programação distribuida atualmente. Com ele é possível que partes de um mesmo programa rode em diferentes máquinas. Por exemplo, uma função pode ser programada para rodar em um host A enquanto o resto do programa rode no host B
 
 ### 💻 Como rodar 
 
+#### Localmente:
+
+Na pasta RPC_1server compile o código rodando o seguinte comando:
+
+```shell
+make
+```
+
+*Opcional:* Você pode rodar um comando para limpar todos os arquivos que são gerados na build, rodando:
+
+```shell
+make clean
+```
+
+Após isso será gerado dois executáveis (ede acordo com o seu sistema operacional), execute eles paralelamente (será mostrado como rodar em sistemas Unix):
+
+O Cliente:
+```shell
+./client
+```
+
+O servidor:
+```shell
+./server
+```
+
+#### Usando docker-compose
+
+É possível rodar os arquivos do RPC usando também o docker-compose, mas esse método apresenta algumas falhas que não apresenta-se localmente. Essas falhas são a não impressão de alguns printf, mas de modo geral o programa é executado corretamente.
+
+Rode: 
+```shell
+sudo docker-compose up --build
+```
+
 ## Solução apresentada
+
+A solução apresentada é um arquivo de configuração do RPC com a extensão .x. A partir dele são gerados os demais aquivos, eximindo assim boa parte do trabalho com a configuração de comunicação de rede. com isso foi necessário apenas gerar a lógica dos algoritmos que envolvem a escolha dos dois menores números e a geração dos valores do vetor inicializado no cliente.
 
 ## Detalhes da Entrega
 
 ### Entrega 1
 
+Conseguimos realizar a entrega dos programas executando como foram propostos, com um porem de que a comunicação TCP não suportou mais que 100000 números no vetor. 
+
 ### Entrega 2
 
-## Opinião geral (adicionar a nota aqui tbm)
+Não conseguimos realizar a entrega dois visto a complexidade de dividir essa tarefa além de configurar.
+
+## Opinião geral
 
 ### Victor Samuel dos Santos Lucas
+
 Acredito que a proposta do exercício foi uma boa maneira de fixar os conteúdos iniciais sobre distribuição de processos, além de ser uma boa forma de relembrar os protocolos de comunicação TCP/UDP.
 
 ### João Pedro Silva de Carvalho
+
+Acho que foi uma boa atividade para entender o funcionamento geral do RPC na prática. O complicado dela é que quase não há referências sobre como programar os arquivos de configuração. Nota: 8
