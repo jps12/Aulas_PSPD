@@ -21,10 +21,10 @@ A aplicação funciona com base no protocolo de comunicação TCP (Transmission 
 
 ### Funcionamento
 Com base na introdução abordada anteriormente, a aplicação funciona da seguinte maneira: 
-    - O Cliente envia ao servidor um vetor de 10 mil possições contendo números aleatórios;
-    - O Servidor recebe o pacote de dados enviado pelo cliente e calcula o maior e menor número do vetor;
-    - O Servidor retorna ao cliente o maior e menor número;
-    - O Cliente recebe e visualiza os dados.
+- O Cliente envia ao servidor um vetor de 10 mil possições contendo números aleatórios;
+- O Servidor recebe o pacote de dados enviado pelo cliente e calcula o maior e menor número do vetor;
+- O Servidor retorna ao cliente o maior e menor número;
+- O Cliente recebe e visualiza os dados.
 
 ### Limitações
 O lado servidor não está aceitando o vetor de 500 mil posições. Para caso de teste foi usado um vetor de 10 mil. 
