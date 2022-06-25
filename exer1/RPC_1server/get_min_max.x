@@ -1,14 +1,15 @@
+const MAX_SIZE = 5000;
 struct vetor{
-    int vetor[100];
+    double vetor[MAX_SIZE];
 };
 
-struct int_pair{
-    int a;
-    int b;
+struct double_pair{
+    double a;
+    double b;
 };
 
 program MIN_MAX{
     version VERSAO{
-        int_pair vetor_min_max(vetor)=1;
+        double_pair vetor_min_max(vetor)=1;
     }=100;
 }=200;

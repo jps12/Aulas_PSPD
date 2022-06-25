@@ -9,15 +9,15 @@
 /* Default timeout can be changed using clnt_control() */
 static struct timeval TIMEOUT = { 25, 0 };
 
-int_pair *
+double_pair *
 vetor_min_max_100(vetor *argp, CLIENT *clnt)
 {
-	static int_pair clnt_res;
+	static double_pair clnt_res;
 
 	memset((char *)&clnt_res, 0, sizeof(clnt_res));
 	if (clnt_call (clnt, vetor_min_max,
 		(xdrproc_t) xdr_vetor, (caddr_t) argp,
-		(xdrproc_t) xdr_int_pair, (caddr_t) &clnt_res,
+		(xdrproc_t) xdr_double_pair, (caddr_t) &clnt_res,
 		TIMEOUT) != RPC_SUCCESS) {
 		return (NULL);
 	}

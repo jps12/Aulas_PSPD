@@ -33,7 +33,7 @@ min_max_100(struct svc_req *rqstp, register SVCXPRT *transp)
 
 	case vetor_min_max:
 		_xdr_argument = (xdrproc_t) xdr_vetor;
-		_xdr_result = (xdrproc_t) xdr_int_pair;
+		_xdr_result = (xdrproc_t) xdr_double_pair;
 		local = (char *(*)(char *, struct svc_req *)) vetor_min_max_100_svc;
 		break;
 

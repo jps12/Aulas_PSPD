@@ -6,7 +6,7 @@
 
 void set_vetor(vetor *vetor_tmp){
 	for (int i=0; i<MAX_SIZE; i++) {
-		vetor_tmp->vetor[i] = (int) pow((i - ((rand() % MAX_SIZE)/2)), 2);
+		vetor_tmp->vetor[i] = sqrt(pow((i - ((rand() % MAX_SIZE)/2.0)), 2));
 	}
 } 
 
@@ -14,7 +14,7 @@ void
 min_max_100(char *host)
 {
 	CLIENT *clnt;
-	int_pair  *result_1;
+	double_pair  *result_1;
 	vetor  vetor_min_max_100_arg;
 
 #ifndef	DEBUG
@@ -28,11 +28,14 @@ min_max_100(char *host)
 	set_vetor(&vetor_min_max_100_arg);
 	result_1 = vetor_min_max_100(&vetor_min_max_100_arg, clnt);
 
-	printf("O resultado é do menor valor é %d enquanto o maior valor é %d\n", result_1->a, result_1->b);
 
-	if (result_1 == (int_pair *) NULL) {
+	if (result_1 == (double_pair *) NULL) {
 		clnt_perror (clnt, "call failed");
+		return;
 	}
+
+
+	printf("O resultado é do menor valor é %lf enquanto o maior valor é %lf\n", result_1->a, result_1->b);
 #ifndef	DEBUG
 	clnt_destroy (clnt);
 #endif	 /* DEBUG */
