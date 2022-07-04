@@ -111,7 +111,7 @@ Não conseguimos realizar a entrega dois visto a complexidade de dividir essa ta
 
 ### Victor Samuel dos Santos Lucas
 
-Acredito que a proposta do exercício foi uma boa maneira de fixar os conteúdos iniciais sobre distribuição de processos, além de ser uma boa forma de relembrar os protocolos de comunicação TCP/UDP.
+Acredito que a proposta do exercício foi uma boa maneira de fixar os conteúdos iniciais sobre distribuição de processos, além de ser uma boa forma de relembrar os protocolos de comunicação TCP/UDP. Nota 8
 
 ### João Pedro Silva de Carvalho
 
