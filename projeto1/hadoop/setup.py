@@ -1,25 +1,27 @@
 #!/usr/bin/python3
 
 import os
-from snakebite.client import Client
-from random import choice
 import json
+from tqdm import tqdm
+from random import choice
+from snakebite.client import Client
+
 client = Client('localhost', 9000)
-words_qtde = 2**20
+words_qtde = 2**26
 
 def setup_hadoop():
 
     if client.test('/output', exists=True):
         for p in client.delete(['/output'], recurse=True):
-            print(p)
+            print(f'\tDiretório deletado: {p}')
 
     if client.test('/input', exists=True):
         for p in client.delete(['/input'], recurse=True):
-            print(p)
+            print(f'\tDiretório deletado: {p}')
 
     if not client.test('/input', exists=True):
         for f in client.mkdir(['/input']):
-            print(f'Created file: {f}')
+            print(f'\tDiretório criado: {p}')
 
     
 
@@ -27,16 +29,19 @@ def generate_words():
     with open('words.json', 'r') as jf:
         words = json.load(jf)
     with open('input.txt', 'w') as fp:
-        for i in range(words_qtde):
+        for i in tqdm(range(words_qtde)):
             fp.write(str(choice(words))+'\n')
 
 def send_file_to_hadoop():
     os.system('hdfs dfs -put input.txt /input')
 
     for f in client.ls(['/input']):
-        print(f)
+        print(f'\tArquivos no diretório HDFS /input: {f}')
 
 if __name__ == '__main__':
-   setup_hadoop()
-   generate_words()
-   send_file_to_hadoop()
+    print("Configurando os diretórios no hdfs")
+    setup_hadoop()
+    print("Gerando o arquivo de input")
+    generate_words()
+    print("Enviando o arquivo para o direório do hdfs")
+    send_file_to_hadoop()

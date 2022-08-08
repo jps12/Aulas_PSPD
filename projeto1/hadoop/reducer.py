@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 import sys
-from tracemalloc import get_object_traceback
 
 def reducer():
     current_word = ''
