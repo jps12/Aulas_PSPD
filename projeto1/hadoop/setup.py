@@ -7,7 +7,7 @@ from random import choice
 from snakebite.client import Client
 
 client = Client('localhost', 9000)
-words_qtde = 2**26
+words_qtde = 2**20
 
 def setup_hadoop():
 
