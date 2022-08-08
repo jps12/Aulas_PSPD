@@ -1,4 +1,4 @@
-# Lab 3 - Hadoop
+# Projeto 1 - Hadoop
 
 ## Como rodar
 
@@ -20,7 +20,7 @@ $HADOOP_HOME/sbin/start-all.sh
 
 ### Rodar o experimento
 
-Gerar o arquivo com os c e enviá-lo para o hadoop
+Gerar o arquivo de input en envia para o HDFS
 
 ```shell
 python3 setup.py
@@ -37,3 +37,5 @@ Apenas rode o arquivo `read-output.py`
 ```shell
 python3 read-output.py
 ```
+
+Por fim abra o arquivo output.txt, para onde será enviado o output do problema
