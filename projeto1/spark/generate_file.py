@@ -1,7 +1,7 @@
 from random import choice
 import json
 
-words_qtde=2**20
+words_qtde=2**26
 
 def generate_words():
     with open('words.json', 'r') as jf:
