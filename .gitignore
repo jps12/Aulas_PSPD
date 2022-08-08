@@ -32,3 +32,8 @@
 *.app
 
 .vscode
+
+# Big files
+
+*input.txt
+*output.txt
